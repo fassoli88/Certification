@@ -1,0 +1,250 @@
+.block-1 {
+      max-width: 400px;
+      height: 450px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+#topcard {
+      text-align: center;
+    }
+    
+#logo{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+#L1{
+      
+      display: block;
+      margin-bottom: 10px;
+    }
+#T1{
+    position: relative;
+      right: -3px;
+      top: 7px;
+    }
+#forget{
+      text-align: center;
+      position: relative;
+      top: 30px;
+      
+      
+    }
+
+#link{
+    text-decoration: none;
+    color: black;
+  }    
+
+#link:hover{
+  text-decoration: underline;
+  color: blue;
+}
+
+#password,#name,#email{
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    
+#submit{
+      width: 100%;
+      position: relative;
+      top: 20px;
+      padding: 10px;
+      background-color: rgb(7, 182, 236);
+      border: none;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    
+#submit:hover {
+      background-color: rgb(6, 156, 202);
+    }
+    
+.error-message {
+      color: red;
+      margin-top: 10px;
+    }
+
+
+.block-2{
+  max-width: 400px;
+  height: 470px;
+  max-height: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ----- home page ----- */
+
+.home {
+  font-family: Arial, sans-serif;
+  background-color: #ccc;
+}
+
+.nav{
+  background-color:  rgb(6, 181, 234)  ;
+}
+
+.navbar{
+  position: relative;
+  left: 20px; 
+}
+
+.nav-item1{  
+  position: relative;
+  left: 315%;
+  font-size:larger;
+}
+
+.nav-item2{  
+  position: relative;
+  left: 320%;
+  font-size:larger;
+}
+
+.nav-item3{  
+  position: relative;
+  left: 325%;
+  font-size:larger;
+  
+}
+
+#nav-button{
+  color: black;
+  background-color: white;
+}
+
+#nav-button:hover{
+  background-color: rgb(226, 224, 224);
+}
+
+.card{
+  position: relative;
+  left: 20px;
+  top: 40px;
+  width: 25rem;
+}
+
+
+.d-flex{
+  position: relative;
+  left: 30px;
+  top: 20px;
+  width: 25rem;
+}
+
+.card{
+  position: relative;
+}
+
+.img{
+  
+  position: absolute;
+  right: 130px;
+  top: 10px;
+}
+
+.card-title{
+  position: absolute;
+  left: 155px;
+  top: 30px
+}
+
+.secondcard{
+  position: relative;
+  top: 80px;
+}
+
+#available{
+
+  background-color: rgb(7, 182, 236);
+  color: white;
+}
+
+
+#available:hover{
+
+  background-color: rgb(7, 163, 211);
+  
+}
+
+#notavailable{
+
+  background-color: rgb(7, 182, 236);
+  color: white;
+
+}
+
+.modal-body{
+  position: relative;
+  left: 450px;
+
+}
+
+#picmod{
+  width: 100px;
+  height: 100px;
+}
+#picmode{
+  position: relative;
+  left: 20px;
+  width: 60px;
+  height: 60px;
+}
+
+#picmoda{
+  position: relative;
+  top: 10px;
+  left: 10px;
+  width:80px;
+  height: 70px;
+}
+#picmodo{
+  position: relative;
+  width: 70px;
+  height: 70px;
+  left: 15px;
+}
+
+#picmodetext{
+  position: relative;
+  left: 40px;
+}
+
+#picmodotext{
+  position: relative;
+  left: 30px;
+}
+
+#picmodatext{
+  position: relative;
+  top: 10px;
+  left: 20px;
+}
+
+.card-text{
+  text-align: center;
+  position: relative;
+  top: 30px;
+}
+
+.ejpt{
+  position: relative;
+  bottom: 15px;
+}
