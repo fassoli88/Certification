@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-
+  <script src="/javascript/code.js"></script>
   <title>Certification</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -24,7 +24,7 @@
       </a>
 
       <li class="nav-item1">
-        <button id=nav-button  onclick="location.href='/contact'" type="button" class="btn">Contact</button>
+        <button id=nav-button  onclick="location.href='/contact'" type="button" class="btn" disabled>Contact</button>
       </li>
       
       <li class="nav-item2">
@@ -130,20 +130,20 @@
       <div class="modal-body">
 
           <div class="form-check">
-            <input class="custom-control-label" type="checkbox" value="" id="">
+            <input class="custom-control-label" type="checkbox">
             <img src="/images/CompTIA A+.svg" id="picmod">
-            <label class="form-check-label" for="flexCheckChecked">
-              <a id="link" href="/A+">
+            <label class="form-check-label">
+              <a id="link" href="/A">
                 CompTIA A+
               </a>
             </label>
           </div>
           
           <div class="form-check">
-            <input class="custom-control-label" type="checkbox" value="" id="" >
+            <input class="custom-control-label" type="checkbox">
             <img src="/images/Security +.png" id="picmod">
-            <label class="custom-control-label" for="flexCheckChecked">
-              <a id="link" href="/security+">
+            <label class="custom-control-label">
+              <a id="link" href="/security">
                 CompTIA Security+
               </a>
             </label>
@@ -151,19 +151,19 @@
 
             
             <div class="form-check">
-              <input class="custom-control-label" type="checkbox" value="" id="">
+              <input class="custom-control-label network" type="checkbox" name="network" >
               <img src="/images/Network +.png" id="picmod">
-              <label class="form-check-label" for="flexCheckChecked">
-                <a id="link" href="/network+">
+              <label class="form-check-label">
+                <a id="link" href="/network">
                   CompTIA Network+
                 </a>
               </label>
             </div>
             
             <div class="form-check">
-              <input class="custom-control-label" type="checkbox" value="" id="">
+              <input class="custom-control-label ccna" type="checkbox" name="ccna">
               <img src="/images/CCNA.png" id="picmode">
-              <label class="form-check-label" for="flexCheckChecked" id="picmodetext">
+              <label class="form-check-label" id="picmodetext">
                 <a id="link" href="/ccna">
                   CCNA
                 </a>
@@ -172,9 +172,9 @@
           
 
             <div class="form-check">
-              <input class="custom-control-label" type="checkbox" value="" id=""> 
+              <input class="custom-control-label" type="checkbox" name="pentest"> 
               <img src="/images/PenTest.png" id="picmod">
-              <label class="form-check-label" for="flexCheckChecked">
+              <label class="form-check-label">
                 <a id="link" href="/pentest">
                   CompTIA PenTest
                 </a>
@@ -182,9 +182,9 @@
             </div>
 
             <div class="form-check ejpt">
-              <input class="custom-control-label" type="checkbox" value="" id="">
+              <input class="custom-control-label" type="checkbox" name="ejpt">
               <img src="/images/eJPT.png" id="picmoda">
-              <label class="form-check-label" for="flexCheckChecked" id="picmodatext">
+              <label class="form-check-label" id="picmodatext">
                 <a id="link" href="/ejpt">
                   eJPT
                 </a>
@@ -192,9 +192,9 @@
             </div>
 
           <div class="form-check">
-            <input class="custom-control-label" type="checkbox" value="" id="">
+            <input class="custom-control-label" type="checkbox">
             <img src="/images/OSCP.png" id="picmodo">
-            <label class="form-check-label" for="flexCheckChecked" id="picmodotext">
+            <label class="form-check-label"id="picmodotext">
               <a id="link" href="/oscp">
                 OSCP
               </a>

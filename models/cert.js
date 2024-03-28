@@ -2,9 +2,17 @@ const mongoose = require('mongoose');
 
 
 const schema = new mongoose.Schema({
-    title: {
+    name: {
        type: String,
        requir: true
+    },
+    email: {
+        type: String,
+        requir: true
+    },
+    pass: {
+        type:String,
+        require: true
     }
 });
 

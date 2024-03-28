@@ -2,21 +2,13 @@
 <html lang="en">
 
 <head>
-  <script>
-
-    function great(){
-
-      let name = document.querySelector('#email').value;
-      alert('hello ' + name);
-    }
-
-  </script>
-
+  
   <title>Login</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="/css/Design.css">
+  <script src="/javascript/code.js"></script>
   <!-- Bootstrap CSS v5.2.1 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
@@ -30,7 +22,7 @@
     <h2 id="topcard">
       Log in
     </h2>
-    <form  method="post" onsubmit="great(); return false;">
+    <form>
       <div id="T1">
       <label id="L1" for="email">Email</label>
       </div>
@@ -40,8 +32,8 @@
       </div>
       <input type="password" autocomplete="off" id="password" name="password" required>
       
-      <input type="submit" id="submit" value="Login">
-      <p id="forget"><a id="link" href="/forget"> Forget your password?</a></p>
+      <input type="submit" id="submit" value="login">
+      <!--<p id="forget"><a id="link" href="/forget"> Forget your password?</a></p>-->
       <p id='forget'><a id="link" href="/signup">I don't have an acount</a></p>
     </form>
 

@@ -1,5 +1,5 @@
 const express = require('express');
-//const mongoose = require('mongoose');
+const mongoose = require('mongoose');
 //let ejs = require ('ejs');
 const app = express();
 const router = require('./routes/cert');
@@ -12,7 +12,8 @@ app.use('/', router);
 
 
 //mogodb
-//mongoose.connect('mongodb://127.0.0.1:27017/cert',{useNewUrlParser: true});
+mongoose.connect('mongodb://127.0.0.1:27017/cert');
+
 
 //port
 app.listen('3000',()=>console.log('express started'));
