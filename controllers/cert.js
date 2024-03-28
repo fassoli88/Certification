@@ -4,6 +4,9 @@ module.exports = {
     home: (req, res)=>{
         res.render('home');
       },
+    homel: (req, res)=>{
+        res.render('homel');
+      },
     
     login: (req, res)=>{
         res.render('login');

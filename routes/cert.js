@@ -2,7 +2,8 @@ const router = require('express').Router();
 const certControllers = require('../controllers/cert');
 
 
-router.get('/', certControllers.home);
+router.get('/home', certControllers.home);
+router.get('/', certControllers.homel);
 
 router.get('/login', certControllers.login);
 
