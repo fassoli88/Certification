@@ -36,6 +36,9 @@ module.exports = {
     oscp: (req, res)=>{
         res.render('oscp');
       },
+    test: (req, res)=>{
+        res.render('test');
+    },
       //post req
     sign: (req, res)=>{
           const first = new cert({email: req.body.email, name: req.body.name, pass: req.body.pass});

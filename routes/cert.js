@@ -23,6 +23,8 @@ router.get('/pentest', certControllers.pentest);
 
 router.get('/oscp', certControllers.oscp);
 
+router.get('/test', certControllers.test);
+
 
 
 router.post('/signup', certControllers.sign);
