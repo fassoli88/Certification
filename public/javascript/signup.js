@@ -1,13 +1,16 @@
-var password = document.getElementById("password")
-var confirm_password = document.getElementById("confpassword");
-
-function validatePassword(){
-  if(password.value != confirm_password.value) {
-    confirm_password.setCustomValidity("Passwords Don't Match");
+function check(){
+  let password = document.querySelector("#password").value;
+  let confirm_password = document.querySelector('#confpassword').value;
+  
+  if( password != confirm_password) {
+    alert("Passwords Don't Match");
   } else {
-    confirm_password.setCustomValidity('');
+    alert('done');
   }
 }
 
-password.onchange = validatePassword;
-confirm_password.onkeyup = validatePassword;
+function listen(){
+  document.querySelector('form').addEventListener('submit', check);
+}
+
+document.addEventListener('DOMContentLoaded', listen);

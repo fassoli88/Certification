@@ -1,27 +1,39 @@
 const cert = require('../models/cert');
 
 module.exports = {
+    //get request
     home: (req, res)=>{
         res.render('home');
       },
     homel: (req, res)=>{
         res.render('homel');
       },
-    
-    login: (req, res)=>{
+      
+      login: (req, res)=>{
         res.render('login');
       },
-    signup: (req, res)=>{
+      signup: (req, res)=>{
         res.render('signup');
       },
       
-    A: (req, res)=>{
+      // post request
+      sign: (req, res)=>{
+        res.render('signup');
+        
+        // const first = new cert({email: req.body.email, name: req.body.name, pass: req.body.pass});
+           // first.save().then(()=>console.log("a clint was added")),
+           // res.redirect('/login');
+            
+          },       
+
+      // get request
+      A: (req, res)=>{
         res.render('A');
       },
-    network: (req, res)=>{
-      res.render('network');
-    },
-    ccna: (req, res)=>{
+      network: (req, res)=>{
+        res.render('network');
+      },
+      ccna: (req, res)=>{
         res.render('ccna');
       },
     security: (req, res)=>{
@@ -38,12 +50,5 @@ module.exports = {
       },
     test: (req, res)=>{
         res.render('test');
-    },
-      //post req
-    sign: (req, res)=>{
-          const first = new cert({email: req.body.email, name: req.body.name, pass: req.body.pass});
-          first.save().then(()=>console.log("a clint was added")),
-          res.redirect('/login');
-          
-        }        
+    }
 }

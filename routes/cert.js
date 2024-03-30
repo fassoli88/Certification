@@ -3,11 +3,12 @@ const certControllers = require('../controllers/cert');
 
 
 router.get('/home', certControllers.home);
-router.get('/', certControllers.homel);
+router.get('/', certControllers.home);
 
 router.get('/login', certControllers.login);
 
 router.get('/signup', certControllers.signup);
+router.post('/signup', certControllers.sign);
 
 router.get('/A', certControllers.A);
 
@@ -27,5 +28,4 @@ router.get('/test', certControllers.test);
 
 
 
-router.post('/signup', certControllers.sign);
 module.exports = router;
