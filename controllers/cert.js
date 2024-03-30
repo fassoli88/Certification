@@ -1,5 +1,5 @@
 const cert = require('../models/cert');
-const { search } = require('../routes/cert');
+
 
 module.exports = {
     //get request
@@ -10,28 +10,56 @@ module.exports = {
         res.render('homel');
       },
       
-      login: (req, res)=>{
+    login: (req, res)=>{
         res.render('login');
       },
+
       // post request
-      log: (req, res)=>{
+    log: async (req, res)=>{
         
-        //res.render('homel');
+      try {
+        // check if the user exists
+        const user = await cert.findOne({ name: req.body.name });
+        if (user) {
+          //check if password matches
+          const result = req.body.password === user.password;
+          if (result) {
+            res.render("home");
+          } else {
+            res.status(400).json({ error: "password doesn't match" });
+          }
+        } else {
+          res.status(400).json({ error: "User doesn't exist" });
+        }
+      } catch (error) {
+        res.status(400).json({ error });
+      }
+      
       },
       
-      signup: (req, res)=>{
+    isLoggedIn(req, res, next) {
+        if (req.isAuthenticated()) return next();
+        res.redirect("/login");
+    },
+
+    signup: (req, res)=>{
         res.render('signup');
-      },
+     },
       /*
       //signup wrong
       signupr: (req, res)=>{
         res.redirect('signup');
       },*/
       // post request
-      sign: (req, res)=>{
-          const first = new cert({email: req.body.email, name: req.body.name, pass: req.body.pass});
+      sign: async (req, res)=>{
+          const first = await cert.create({
+             name: req.body.name,
+             email: req.body.email, 
+             pass: req.body.pass});
           first.save().then(()=>console.log("a clint was added")),
           res.render('login');
+          
+          return res.status(200).json(cert);
           },       
 
       // get request

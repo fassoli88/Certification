@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+const passportLocalMongoose = require('passport-local-mongoose');
 
-
-const schema = new mongoose.Schema({
+var cert = new Schema({
     name: {
        type: String,
        requir: true
@@ -16,4 +17,5 @@ const schema = new mongoose.Schema({
     }
 });
 
-module.exports = new mongoose.model('cert', schema);
+cert.plugin(passportLocalMongoose);
+module.exports = new mongoose.model('cert', cert);
