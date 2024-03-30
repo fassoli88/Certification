@@ -4,8 +4,9 @@ function check(){
   
   if( password != confirm_password) {
     alert("Passwords Don't Match");
+    document.querySelector('form').setAttribute("method", "GET").setAttribute("action", "/signup");
   } else {
-    alert('done');
+    document.querySelector('form').setAttribute("method", "POST").setAttribute("action", "/signup");
   }
 }
 

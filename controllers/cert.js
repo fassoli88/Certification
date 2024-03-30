@@ -18,12 +18,9 @@ module.exports = {
       
       // post request
       sign: (req, res)=>{
-        res.render('signup');
-        
-        // const first = new cert({email: req.body.email, name: req.body.name, pass: req.body.pass});
-           // first.save().then(()=>console.log("a clint was added")),
-           // res.redirect('/login');
-            
+          const first = new cert({email: req.body.email, name: req.body.name, pass: req.body.pass});
+          first.save().then(()=>console.log("a clint was added")),
+          res.redirect('/login');
           },       
 
       // get request
