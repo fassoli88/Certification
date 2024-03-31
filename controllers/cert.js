@@ -20,10 +20,12 @@ module.exports = {
       try {
         // check if the user exists
         const user = await cert.findOne({ name: req.body.name });
-        if (user) {
+        const mail = await cert.findOne({ email: req.body.email });
+        if (user || mail) {
           //check if password matches
-          const result = req.body.password === user.password;
-          if (result) {
+          const result = req.body.pass === user.pass;
+          const mresult = req.body.pass === mail.pass;
+          if (result || mresult) {
             res.render("home");
           } else {
             res.status(400).json({ error: "password doesn't match" });

@@ -12,7 +12,7 @@ var cert = new Schema({
         requir: true
     },
     pass: {
-        type:String,
+        type: String,
         require: true
     }
 });

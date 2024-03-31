@@ -22,7 +22,7 @@ app.use('/', router);
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(require("express-session")({
-    secret: "keyboard cat",
+    secret: "Rusty is a dog",
     resave: false,
     saveUninitialized: false
 }));
