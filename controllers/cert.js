@@ -53,16 +53,7 @@ module.exports = {
         res.redirect('signup');
       },*/
       // post request
-      sign: async (req, res)=>{
-          const first = await cert.create({
-             name: req.body.name,
-             email: req.body.email, 
-             pass: req.body.pass});
-          first.save().then(()=>console.log("a clint was added")),
-          res.render('login');
-          
-          return res.status(200).json(cert);
-          },       
+      sign: async (req, res)=>{},       
 
       // get request
       A: (req, res)=>{
