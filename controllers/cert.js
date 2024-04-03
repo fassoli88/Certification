@@ -19,20 +19,20 @@ module.exports = {
         
       try {
         // check if the user exists
-        const user = await cert.findOne({ name: req.body.name });
+        const user = await cert.findOne({ username: req.body.username });
+
         //const mail = await cert.findOne({ email: req.body.email });
         if (user) {
           //check if password matches
           const result = req.body.pass === user.pass;
           //const mresult = req.body.pass === mail.pass;
           if (result) {
-            res.render("home");
+            res.redirect("home");
           } else {
-            res.status(400).json({ error: req.body.pass + "password doesn't match " + user.pass });
+            res.status(400).json({ error: " password doesn't match " });
           }
         } else {
-          res.status(400).json({ error: "User doesn't exist " + user });
-          res.render('signup');
+          res.status(400).json({ error: " User doesn't exist " });
         }
       } catch (error) {
         res.status(400).json({ error });
@@ -58,12 +58,14 @@ module.exports = {
       sign: async (req, res)=>{
       try{
 
-        const first = new cert({
-          name: req.body.name,
+        var first = new cert({
+          username: req.body.username,
           email: req.body.email,
           pass: req.body.pass
         });
+        
         first.save().then(()=>console.log("a clint was added"));
+        res.redirect('login');
 
       }catch (error) {
         res.status(400).json({ error });

@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 const passportLocalMongoose = require('passport-local-mongoose');
 
 var cert = new Schema({
-    name: {
+    username: {
        type: String,
        requir: true
     },
