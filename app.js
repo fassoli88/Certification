@@ -10,11 +10,6 @@ const passportLocalMongoose = require("passport-local-mongoose");
 const cert = require("./models/cert.js");
 
 
-//mogodb
-mongoose.connect('mongodb://127.0.0.1:27017/cert');
-
-
-
 app.set("view engine", "ejs");
 app.use(express.urlencoded({extended: true}));
 app.use(express.static('public'));
