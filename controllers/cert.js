@@ -40,19 +40,9 @@ module.exports = {
       
       },
       
-    isLoggedIn(req, res, next) {
-        if (req.isAuthenticated()) return next();
-        res.redirect("/login");
-    },
-
     signup: (req, res)=>{
         res.render('signup');
      },
-      /*
-      //signup wrong
-      signupr: (req, res)=>{
-        res.redirect('signup');
-      },*/
 
       // post request
       sign: async (req, res)=>{
