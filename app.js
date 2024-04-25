@@ -18,6 +18,9 @@ app.use(express.static('public'));
 app.use('/', router);
 
 app.use(bodyParser.urlencoded({ extended: true }));
+
+app.set('trust proxy', 1);
+
 app.use(session({
   cookie:{
     secure: true,
