@@ -8,6 +8,9 @@ const passport = require('passport');
 const LocalStrategy = require("passport-local");
 const passportLocalMongoose = require("passport-local-mongoose");
 const cert = require("./models/cert.js");
+const session = require('express-session')
+const MemoryStore = require('memorystore')(session)
+
 
 
 app.set("view engine", "ejs");
@@ -20,6 +23,15 @@ app.use(require("express-session")({
     secret: "Rusty is a dog",
     resave: false,
     saveUninitialized: false
+}));
+
+app.use(session({
+    cookie: { maxAge: 86400000 },
+    store: new MemoryStore({
+      checkPeriod: 86400000 // prune expired entries every 24h
+    }),
+    resave: false,
+    secret: 'keyboard cat'
 }));
  
 app.use(passport.initialize());
