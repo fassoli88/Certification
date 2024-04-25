@@ -18,7 +18,7 @@ app.use(express.static('public'));
 app.use('/', router);
 
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(require("cookie-session")({
+app.use(require("express-session")({
     secret: "keyboard cat",
     resave: false,
     saveUninitialized: false
