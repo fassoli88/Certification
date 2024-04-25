@@ -41,4 +41,5 @@ passport.serializeUser(cert.serializeUser());
 passport.deserializeUser(cert.deserializeUser());
 
 //port
-app.set('port', process.env.PORT || 3000, ()=>console.log('express started'));
+if (process.env.NODE_ENV === "test") app.set("port", 3001);
+else app.set("port", process.env.PORT || 3000);
