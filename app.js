@@ -18,15 +18,25 @@ app.use(express.static('public'));
 app.use('/', router);
 
 app.use(bodyParser.urlencoded({ extended: true }));
+app.set('trust proxy', 1);
 
 app.use(session({
-  cookie: { maxAge: 86400000 },
-  store: new MemoryStore({
-    checkPeriod: 86400000 // prune expired entries every 24h
-  }),
-  resave: false,
-  secret: 'keyboard cat'
+cookie:{
+    secure: true,
+    maxAge:60000
+       },
+store: new RedisStore(),
+secret: 'secret',
+saveUninitialized: true,
+resave: false
 }));
+
+app.use(function(req,res,next){
+if(!req.session){
+    return next(new Error('Oh no')) //handle error
+}
+next() //otherwise continue
+});
 
 app.use(function(req,res,next){
   if(!req.session){
