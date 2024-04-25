@@ -6,7 +6,6 @@ const router = require('./routes/cert.js');
 const bodyParser = require("body-parser");
 const passport = require('passport');
 const LocalStrategy = require("passport-local");
-const passportLocalMongoose = require("passport-local-mongoose");
 const cert = require("./models/cert.js");
 const session = require('express-session')
 const MemoryStore = require('memorystore')(session)
@@ -19,19 +18,6 @@ app.use(express.static('public'));
 app.use('/', router);
 
 app.use(bodyParser.urlencoded({ extended: true }));
-app.set('trust proxy', 1);
-
-app.use(session({
-cookie:{
-    secure: true,
-    maxAge:60000
-       },
-store: new RedisStore(),
-secret: 'secret',
-saveUninitialized: true,
-resave: false
-}));
-
 app.use(session({
     cookie: { maxAge: 86400000 },
     store: new MemoryStore({
@@ -39,7 +25,9 @@ app.use(session({
     }),
     resave: false,
     secret: 'keyboard cat'
-}));
+}))
+
+
  
 app.use(passport.initialize());
 app.use(passport.session());
