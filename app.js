@@ -7,8 +7,6 @@ const bodyParser = require("body-parser");
 const passport = require('passport');
 const LocalStrategy = require("passport-local");
 const cert = require("./models/cert.js");
-const session = require('express-session');
-const MemoryStore = require('memorystore')(session);
 
 
 
@@ -18,25 +16,11 @@ app.use(express.static('public'));
 app.use('/', router);
 
 app.use(bodyParser.urlencoded({ extended: true }));
-app.set('trust proxy', 1);
-
-app.use(session({
-cookie:{
-    secure: true,
-    maxAge:60000
-       },
-store: new RedisStore(),
-secret: 'secret',
-saveUninitialized: true,
-resave: false
+app.use(require("express-session")({
+    secret: "keyboard cat",
+    resave: false,
+    saveUninitialized: false
 }));
-
-app.use(function(req,res,next){
-if(!req.session){
-    return next(new Error('Oh no')) //handle error
-}
-next() //otherwise continue
-});
 
 app.use(function(req,res,next){
   if(!req.session){
