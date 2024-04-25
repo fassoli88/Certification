@@ -7,6 +7,8 @@ const bodyParser = require("body-parser");
 const passport = require('passport');
 const LocalStrategy = require("passport-local");
 const cert = require("./models/cert.js");
+require("dotenv").config();
+
 
 
 
@@ -39,4 +41,4 @@ passport.serializeUser(cert.serializeUser());
 passport.deserializeUser(cert.deserializeUser());
 
 //port
-app.listen(process.env.PORT, ()=>console.log('express started'));
+app.set('port', process.env.PORT || 3000, ()=>console.log('express started'));
