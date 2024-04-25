@@ -16,7 +16,7 @@ app.use(express.static('public'));
 app.use('/', router);
 
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(require("express-session")({
+app.use(require("cookie-session'")({
     secret: "Rusty is a dog",
     resave: false,
     saveUninitialized: false
