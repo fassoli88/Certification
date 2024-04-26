@@ -8,8 +8,6 @@ router.get('/home', certControllers.homel);
 router.get('/login', certControllers.login);
 router.post('/login', certControllers.log);
 
-router.get('/logina', certControllers.logina);
-
 router.get('/signup', certControllers.signup);
 //router.get('/signupr', certControllers.signupr);
 router.post('/signup', certControllers.sign);
