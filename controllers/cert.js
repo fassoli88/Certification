@@ -14,6 +14,11 @@ module.exports = {
         res.render('login');
       },
 
+      logina: (req, res)=>{
+        res.render('logina');
+      },
+
+
       // post request
     log: async (req, res)=>{
         
