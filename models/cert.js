@@ -4,13 +4,7 @@ const passportLocalMongoose = require('passport-local-mongoose');
 
 
 //mogodb
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/cert')
-.then(()=>{
-    console.log('mongoose connected');
-})
-.catch((e)=>{
-    console.log('failed');
-})
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/cert');
 
 var cert = new Schema({
     username: {
