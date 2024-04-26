@@ -20,8 +20,9 @@ app.use('/', router);
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(require("cookie-session")({
     secret: "keyboard cat",
-    resave: false,
-    saveUninitialized: false
+    proxy: true,
+    resave: true,
+    saveUninitialized: true
 }));
 
 app.use(function(req,res,next){
