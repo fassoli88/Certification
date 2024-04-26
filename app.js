@@ -41,6 +41,6 @@ passport.serializeUser(cert.serializeUser());
 passport.deserializeUser(cert.deserializeUser());
 
 //port
-app.listen( process.env.PORT || 3000, '0.0.0.0', () => {
+app.listen( process.env.PORT || 3500, '0.0.0.0', () => {
   console.log("Server is running.");
 });
