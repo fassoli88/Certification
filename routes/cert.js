@@ -28,6 +28,9 @@ router.get('/oscp', certControllers.oscp);
 
 router.get('/test', certControllers.test);
 
+router.get('/privacy', certControllers.privacy);
+
+
 
 
 module.exports = router;

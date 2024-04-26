@@ -7,10 +7,16 @@ const bodyParser = require("body-parser");
 const passport = require('passport');
 const LocalStrategy = require("passport-local");
 const cert = require("./models/cert.js");
+let jwt = require('jsonwebtoken');
+let fs = require('fs');
 
 
-
-
+/*
+let privateKey = fs.readFileSync('private.key');
+let token = jwt.sign({name: 'test'}, privateKey);
+let result = jwt.verify(token, 'mySecretKey');
+console.log(result);
+*/
 
 app.set("view engine", "ejs");
 app.use(express.urlencoded({extended: true}));
