@@ -1,217 +1,98 @@
-<!doctype html>
-<html lang="en">
+  <!doctype html>
+  <html lang="en">
 
-<head>
-  <script src="/javascript/home.js"></script>
-  <title>Certification</title>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="/css/Design.css">
-  <!-- Bootstrap CSS v5.2.1 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <head>
+    <script src="/javascript/home.js"></script>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-</head>
+    <title>Certification</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/css/homel.css">
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
-<body class="home">
+  </head>
 
-  <ul class="nav">
-      <nav class="navbar">
-      <div class="container-fluid">
-      <a class="navbar-brand" href="/home">
-        <img src="/images/programming.jpg" width="70" height="70" alt="home pic">
-      </a>
-<!--
+  <body>
+  <div id="app">
 
-
-      <li class="nav-item1">
-        <button id=nav-button  onclick="location.href='/contact'" type="button" class="btn" disabled>Contact</button>
-      </li>
-      
-      <li class="nav-item2">
-        <button id=nav-button onclick="location.href='/login'" type="button" class="btn">Log in</button>
-      </li>
-
-
-      <li class="nav-item3">
-        <button id=nav-button  onclick="location.href='/signup'" type="button" class="btn">Sign up</button>
-      </li>
-    -->
-</ul>
-
-<!--
-    <form class="d-flex">
-      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-      <button type="button" class="btn" style="background-color: rgb(7, 182, 236);" type="submit">Search</button>
-    </form>
--->
-
-    <div class="row row-cols-1 row-cols-md-3 g-0">
-
-      <div class="col">
-        <div class="card" style="height: 20rem;">
-          <img id='logo' src="/images/cyber-security.png" class="img" style="width: 70px; height: 70px; position: relative;" alt="...">
-          <h3 class="card-title">Cyber-Security</h3>
-          <div class="card-body">
-            <p class="card-text"> سيظهر لك في هذه الخانة مسار كامل للأمن السبراني من مصادر تعلم والعديد من الشهادات وذلك لرفع قيمة السيرة الذاتية الخاصة بك ومساعدتك في الحصول على الوظيفة المناسبة لك</p>
-            <br>
-            <br>
-              <button id='available' class="btn d-grid gap-2 col-6 mx-auto" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">متوفر</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="card" style="height: 20rem;">
-          <img id='logo' src="/images/programming-course.png" class="img" style="width: 70px; height: 70px; position: relative;" alt="...">
-          <h4 class="card-title">Computer-Science</h4>
-          <div class="card-body">
-            <p class="card-text"> سيظهر لك في هذه الخانة مسار كامل لعلوم الكمبيوتر من مصادر تعلم والعديد من الشهادات وذلك لرفع قيمة السيرة الذاتية الخاصة بك ومساعدتك في الحصول على الوظيفة المناسبة لك</p>
-            <br>
-            <br>
-            <button id="notavailable" class="btn btn-light d-grid gap-2 col-6 mx-auto disabled" type="button">...قريبا</button>
-          </div>
-        </div>
-      </div>
-
-      
-      <div class="col">
-        <div class="card" style="height: 20rem;">
-          <img src="/images/machine-learning.png" class="img" style="width: 70px; height: 70px; position: relative;" id="logo">
-          <h4 class="card-title">Artificial-Intelligence</h4>
-          <div class="card-body">
-            <p class="card-text"> سيظهر لك في هذه الخانة مسار كامل للذكاء الاصطناعي من مصادر تعلم والعديد من الشهادات وذلك لرفع قيمة السيرة الذاتية الخاصة بك ومساعدتك في الحصول على الوظيفة المناسبة لك</p>
-            <br>
-            <br>
-            <button id="notavailable" class="btn btn-light d-grid gap-2 col-6 mx-auto disabled" type="button">...قريبا</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="secondcard">
-        <div class="col">
-          <div class="card" style="height: 20rem;">
-            <img src="/images/application.png" class="img" style="width: 70px; height: 70px; position: relative;" id="logo">
-            <h4 class="card-title">Web-Devlompent</h4>
-            <div class="card-body">
-              <p class="card-text"> سيظهر لك في هذه الخانة مسار كامل لمطور المواقع من مصادر تعلم والعديد من الشهادات وذلك لرفع قيمة السيرة الذاتية الخاصة بك ومساعدتك في الحصول على الوظيفة المناسبة لك</p>
-              <br>
-              <br>
-              <button id="notavailable" class="btn btn-light d-grid gap-2 col-6 mx-auto disabled" type="button">...قريبا</button>
-           </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="secondcard">
-        <div class="col">
-          <div class="card" style="height: 20rem;">
-            <img src="/images/network.png" class="img" style="width: 70px; height: 70px; position: relative;" id="logo">
-            <h4 class="card-title">Network-Security</h4>
-            <div class="card-body">
-              <p class="card-text"> سيظهر لك في هذه الخانة مسار كامل للشبكات وأمن المعلومات من مصادر تعلم والعديد من الشهادات وذلك لرفع قيمة السيرة الذاتية الخاصة بك ومساعدتك في الحصول على الوظيفة المناسبة لك</p>
-              <br>
-              <br>
-              <button id="notavailable" class="btn btn-info d-grid gap-2 col-6 mx-auto disabled" type="button">...قريبا</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-    </div>
-  <!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog modal-xl">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">Cyber-Security</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-
-
-      <div class="modal-body">
-
-          <div class="form-check">
-            <input class="custom-control-label" type="checkbox">
-            <img src="/images/CompTIA A+.svg" id="picmod">
-            <label class="form-check-label">
-              <a id="link" href="/A">
-                CompTIA A+
-              </a>
-            </label>
-          </div>
-          
-          <div class="form-check">
-            <input class="custom-control-label" type="checkbox">
-            <img src="/images/Security +.png" id="picmod">
-            <label class="custom-control-label">
-              <a id="link" href="/security">
-                CompTIA Security+
-              </a>
-            </label>
-          </div>
-
-            
-            <div class="form-check">
-              <input class="custom-control-label network" type="checkbox" name="network" >
-              <img src="/images/Network +.png" id="picmod">
-              <label class="form-check-label">
-                <a id="link" href="/network">
-                  CompTIA Network+
-                </a>
-              </label>
-            </div>
-            
-            <div class="form-check">
-              <input class="custom-control-label ccna" type="checkbox" name="ccna">
-              <img src="/images/CCNA.png" id="picmode">
-              <label class="form-check-label" id="picmodetext">
-                <a id="link" href="/ccna">
-                  CCNA
-                </a>
-              </label>
-            </div>
-          
-
-            <div class="form-check">
-              <input class="custom-control-label" type="checkbox" name="pentest"> 
-              <img src="/images/PenTest.png" id="picmod">
-              <label class="form-check-label">
-                <a id="link" href="/pentest">
-                  CompTIA PenTest
-                </a>
-             </label>
-            </div>
-
-            <div class="form-check ejpt">
-              <input class="custom-control-label" type="checkbox" name="ejpt">
-              <img src="/images/eJPT.png" id="picmoda">
-              <label class="form-check-label" id="picmodatext">
-                <a id="link" href="/ejpt">
-                  eJPT
-                </a>
-              </label>
-            </div>
-
-          <div class="form-check">
-            <input class="custom-control-label" type="checkbox">
-            <img src="/images/OSCP.png" id="picmodo">
-            <label class="form-check-label"id="picmodotext">
-              <a id="link" href="/oscp">
-                OSCP
-              </a>
-            </label>
-          </div>
-
-      </div>
-      <div class="modal-footer">
-        <button id="available" type="button" class="btn" data-bs-dismiss="modal">Close</button>
-      </div>
-    </div>
   </div>
-</div>
 
+  <script type="text/babel">
+    function App(){
+
+      const [state, setState]= React.useState({
+        names: [],
+        newname: "",
+        listname: "",
+        
+
+      });
+      
+      function inputKey(event){
+            setState({
+              ...state,
+              names: [...state.names, `${state.newname}`], 
+            });          
+      }
+
+
+      function ListName(event){  
+          setState(
+            listname= state.names.map((name, index)=>
+            <li key={index}>
+              {name}
+              </li>)   
+            )
+      }
+
+      function updaten(event){
+        setState({
+          ...state,
+          newname: event.target.value,
+        });
+      }
+      
+      function Hello(){
+        return(
+          <div>
+            list
+          </div>
+        );
+      }
+      function Clear(){
+        setState({
+          ...state, 
+          names: [] 
+        });
+      }
+      return(
+        <div style={{textAlign: "center"}}>
+        <h1>My list</h1>  
+        <ul>
+          
+        </ul>
+        <input onChange={updaten} value={state.newname.value} />           
+        <br/>
+        <br/>
+        <button onClick={inputKey}> Add to List </button>
+        <button onClick={ListName}>show me</button>
+        <button onClick={Clear}> Delete </button>
+        </div>
+      );
+    }
+
+    ReactDOM.render(<App/>, document.querySelector("#app"));
+    //setTimeout(function(){ window.location.reload(); }, 5000);
+    
+          
+  </script>
+  
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">

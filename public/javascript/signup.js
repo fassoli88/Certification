@@ -1,13 +1,12 @@
 function check(){
   let password = document.querySelector("#password").value;
   let confirm_password = document.querySelector('#confpassword').value;
-  
-  if( password != confirm_password) {
-    alert("Passwords Don't Match");
-    document.querySelector('form').setAttribute("method", "GET").setAttribute("action", "/signup");
-  } else {
+
+  if( password === confirm_password) {
     document.querySelector('form').setAttribute("method", "POST").setAttribute("action", "/signup");
-  }
+  } else {
+    alert("Passwords Don't Match");
+  }  
 }
 
 function listen(){
